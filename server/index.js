@@ -77,6 +77,9 @@ app.post("/api/shakes", (req, res) => {
   });
 });
 
+
+
+//Update any information from DATABASE
 app.patch("/api/shakes/:id", (req, res) => {
   const { name, description, type, price, image } = req.body;
   const id = req.params.id

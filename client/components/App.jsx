@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import GetAllShakes from "./App1"
+
+
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-
+  const [data, setData] = useState([]);
+  
   useEffect(() => {
-    fetch("/api/tasks")
-      .then((res) => res.json())
-      .then((tasks) => {
-        setTasks(tasks);
-      });
+    try { const getData = async() => {
+      const result = await axios.get("api/shakes");
+      setData(result.data);
+    }
+      getData()
+    } catch (error) {
+      console.error(error)
+    };
   }, []);
 
+
   return (
-    <main>
-      {tasks.map((task) => (
-        <span className="task" key={task.id}>
-          {task.description}
-        </span>
-      ))}
-    </main>
-  );
+    <GetAllShakes allShakes={data}/>
+    )
 };
 
 export default App;
