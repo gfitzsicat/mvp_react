@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import GetAllShakes from "./App1"
-
+import GetAllShakes from "./Content"
+import Navbar from "./Navbar";
 
 
 const App = () => {
@@ -18,9 +18,13 @@ const App = () => {
     };
   }, []);
 
-
   return (
-    <GetAllShakes allShakes={data}/>
+    <div>
+      <Navbar />
+        <div>
+          <GetAllShakes allShakes={data}/>
+        </div>
+    </div>
     )
 };
 

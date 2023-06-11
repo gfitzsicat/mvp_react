@@ -12,10 +12,15 @@
     "dev:server": "npm run dev --workspace=server"
   },
   "devDependencies": {
-    "concurrently": "^7.1.0"
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^7.1.0",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   },
   "dependencies": {
+    "bootstrap": "^5.3.0",
     "pg": "^8.11.0",
-    "pg-pool": "^3.6.0"
+    "pg-pool": "^3.6.0",
+    "react-router-dom": "^6.12.1"
   }
 }

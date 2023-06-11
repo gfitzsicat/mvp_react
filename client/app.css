@@ -1,23 +1,30 @@
 body {
-  margin: 0;
+  background-color: #B2DFDB;
 }
 
-.main {
-  padding: 8px;
-}
-
-.task {
+.shakes-container {
   display: flex;
-  align-items: center;
-  border: 1px solid black;
-  padding: 2px;
-  max-width: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
-.task + .task {
-  margin-top: 4px;
+.shakes-container > div {
+  margin: 10px;
 }
 
-.task > * + * {
-  margin-left: 4px;
+.shake-item {
+  margin: 10px;
+  background-color: rgb(213, 232, 35);
+  color: rgb(244, 23, 111);
+  border: 1px solid rgb(12, 160, 235);
+  border-radius: 1px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.listItem {
+  margin: 0 10px;
+  font-size: 30px;
+  border-bottom: 1px solid Blue;
+  font-family: 'Times New Roman';
 }
