@@ -1,8 +1,9 @@
-import express from "express";
-import pg from "pg";
+import express from 'express'
+import pg from 'pg'
 import dotenv from "dotenv";
+import cors from 'cors';
 
-dotenv.config({ path: "../.env" });
+dotenv.config();
 
 const PORT = process.env.PORT;
 const db = new pg.Pool({
@@ -10,8 +11,10 @@ const db = new pg.Pool({
 });
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
+
+
 
 
 //Get all the information from the DATABASE
